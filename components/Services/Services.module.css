@@ -1,0 +1,146 @@
+/* ================= SERVIÇOS ================= */
+.servicos {
+  position: relative;
+  padding: var(--section-padding);
+  text-align: center;
+  background: var(--dark);
+}
+
+.servicos h2,
+.servicosContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.servicos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.85);
+}
+
+/* CONTAINER */
+.servicosContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center; /* 👈 centraliza igual fizemos antes */
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+/* CARD */
+.servicoCard {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: 0.4s;
+  transform: translateY(40px) scale(0.95);
+}
+
+.servicoCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.servicoCard:hover::after {
+  border: 1px solid rgba(0, 200, 150, 0.3);
+}
+
+/* animação reveal */
+.servicoCard.reveal.active {
+  transform: translateY(0) scale(1);
+}
+
+/* imagem */
+.image {
+  object-fit: cover;
+}
+
+/* hover imagem */
+.servicoCard:hover .image {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+:global(.btn-servico) {
+  position: relative;
+  z-index: 2;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 37, 64, 0.9), transparent);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: var(--light);
+  transition: 0.3s;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.servicoCard:hover .overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 37, 64, 1),
+    rgba(10, 37, 64, 0.3)
+  );
+}
+
+/* texto */
+.overlay h3 {
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* tag */
+.tag {
+  font-size: 12px;
+  background: rgba(0, 200, 150, 0.2);
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+/* botão (global) */
+.servicoCard:hover :global(.btn-servico) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .servicoCard {
+    width: 100%;
+    height: 300px;
+  }
+
+  .overlay p {
+    font-size: 0.85rem;
+  }
+
+  .btn-servico {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}

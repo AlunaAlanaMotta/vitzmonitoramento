@@ -1,0 +1,163 @@
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+
+  background: url("/images/fundo.png") center/cover no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* overlay */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.95));
+  z-index: 0;
+}
+
+/* conteúdo */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* título */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--light);
+  line-height: 1.3;
+}
+
+/* descrição */
+.hero p {
+  margin: 20px 0 30px;
+  font-size: 1.1rem;
+  color: #d1d5db;
+}
+
+/* botão */
+.btnHero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary);
+  color: #fff;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btnHero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 20px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  opacity: 0.7;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+
+.scrollIndicator::after {
+  content: "";
+  width: 4px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: scroll 1.5s infinite;
+}
+
+.hide {
+  opacity: 0;
+  transform: translate(-50%, 20px);
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .heroContent {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    margin: 15px 0 25px;
+  }
+
+  .btnHero {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .scrollIndicator {
+    bottom: 60px;
+    width: 16px;
+    height: 28px;
+  }
+
+  .scrollIndicator::after {
+    height: 5px;
+  }
+}

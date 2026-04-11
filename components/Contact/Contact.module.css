@@ -1,0 +1,244 @@
+/* ================= CONTATO ================= */
+.contato {
+  background: var(--dark);
+  color: var(--light);
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.contato p {
+  margin-bottom: 40px;
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+/* ================= WRAPPER ================= */
+.contatoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ================= FORM ================= */
+.contatoForm {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.contatoForm:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ================= GRID ================= */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* INPUT GROUP */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.full {
+  grid-column: span 3;
+}
+
+/* ================= INPUTS ================= */
+.formGrid input,
+.formGrid textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: var(--border);
+  color: var(--light);
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+}
+
+.formGrid textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+/* placeholder */
+.formGrid input::placeholder,
+.formGrid textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* focus */
+.formGrid input:focus,
+.formGrid textarea:focus {
+  border: 1px solid var(--primary);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(0, 200, 150, 0.3);
+  outline: none;
+}
+
+/* ================= ESTADOS ================= */
+.error {
+  border: 1px solid #ff4d4f !important;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.4);
+}
+
+.success {
+  border: 1px solid #00c896 !important;
+}
+
+.errorText {
+  font-size: 0.75rem;
+  color: #ff4d4f;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* ================= BOTÃO ================= */
+.btnEnviar {
+  position: relative;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnEnviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btnEnviarSuccess {
+  background: #16a34a;
+}
+
+/* TEXTO */
+.btnText {
+  transition: 0.3s;
+}
+
+/* LOADER */
+.loader {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0;
+}
+
+/* ESTADO LOADING */
+.btnEnviarLoading {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.btnEnviarLoading .btnText {
+  opacity: 0;
+}
+
+.btnEnviarLoading .loader {
+  opacity: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= CONTATO INFO ================= */
+.contatoInfo {
+  text-align: center;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.btnWhatsapp {
+  background: var(--primary);
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  text-decoration: none;
+  color: white;
+}
+
+.btnWhatsapp:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .contatoWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+
+  .contatoForm {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .contatoInfo {
+    width: 100%;
+  }
+
+  .btnWhatsapp {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .errorText {
+    font-size: 0.7rem;
+  }
+}

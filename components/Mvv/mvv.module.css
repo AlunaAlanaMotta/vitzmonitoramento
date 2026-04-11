@@ -1,0 +1,110 @@
+/* ================= MVV ================= */
+.mvv {
+  position: relative;
+  padding: var(--section-padding);
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)),
+    url("/images/missao.png");
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* glow */
+.mvv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 200, 150, 0.08),
+    transparent 60%
+  );
+
+  pointer-events: none;
+}
+
+/* container */
+.mvvContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+/* card */
+.mvvCard {
+  width: 300px;
+  padding: 35px 30px;
+  border-radius: var(--radius);
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+
+  color: var(--light);
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.4s;
+}
+
+/* linha lateral */
+.mvvCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 4px;
+
+  background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+/* hover */
+.mvvCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-glow);
+  transform: scale(1.1);
+}
+
+/* ícone */
+.mvvCard i {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* título */
+.mvvCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* texto */
+.mvvCard p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .mvvContainer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .mvvCard {
+    width: 100%;
+    max-width: 320px;
+    padding: 25px 20px;
+  }
+}
