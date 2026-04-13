@@ -15,7 +15,7 @@ export default function Services() {
       img: "/images/central.png",
       tag: "Monitoramento",
       title: "Monitoramento 24h",
-      desc: "Monitoramento 24 horas com tecnologia avançada e resposta rápida para prevenir incidentes e garantir segurança contínua.",
+      desc: "Acompanhamento em tempo real com equipe preparada para agir rapidamente em qualquer situação.",
     },
     {
       img: "/images/zeladoria.png",

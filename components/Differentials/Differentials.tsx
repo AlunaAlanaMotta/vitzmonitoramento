@@ -39,9 +39,7 @@ export default function Differentials() {
       <div className="container">
         <div className={styles.content}>
           {/* TÍTULO SEO */}
-          <h2 className="titulo reveal">
-            Diferenciais da nossa empresa de segurança
-          </h2>
+          <h2 className="titulo reveal">Por que escolher a Vitz?</h2>
 
           <div className={styles.containerGrid}>
             {items.map((item, index) => (

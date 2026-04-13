@@ -73,7 +73,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      await fetch("https://formsubmit.co/mottaalana0@gmail.com", {
+      await fetch("https://formsubmit.co/grupovitz@gmail.com", {
         method: "POST",
         body: new FormData(e.currentTarget),
       });
@@ -110,14 +110,13 @@ export default function Contact() {
       <div className="container">
         {/* SEO TITLE */}
         <h2 className="titulo reveal">
-          Solicite um orçamento de segurança em Curitiba
+          Solicite um orçamento em Curitiba e região
         </h2>
 
         {/* SEO TEXT */}
-        <p className="reveal">
-          Entre em contato com nossa empresa de segurança em Curitiba e solicite
-          um orçamento personalizado para proteger seu patrimônio com tecnologia
-          e eficiência.
+        <p>
+          Entre em contato agora mesmo e descubra a melhor solução em segurança
+          para você.
         </p>
 
         <div className={styles.contatoWrapper}>

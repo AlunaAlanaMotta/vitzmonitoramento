@@ -27,8 +27,7 @@ export default function About() {
         {/* TEXTO */}
         <div className={`${styles.sobreText} reveal`}>
           <h2 id="sobre-titulo" className="titulo">
-            Empresa de segurança em Curitiba especializada em proteção e
-            monitoramento
+            Sobre a Vitz Monitoramento
           </h2>
 
           <p className={styles.subtitulo}>
@@ -36,10 +35,11 @@ export default function About() {
           </p>
 
           <p>
-            A VITZ Segurança é uma empresa de segurança em Curitiba que oferece
-            soluções completas em monitoramento 24h, controle de acesso e
-            facilities. Utilizamos tecnologia avançada e processos estratégicos
-            para garantir proteção eficiente e redução de riscos.
+            A Vitz Monitoramento oferece soluções modernas em segurança
+            eletrônica para residências e empresas. Trabalhamos com tecnologia
+            atualizada, atendimento ágil e foco total na proteção do seu
+            patrimônio. Nossa missão é garantir tranquilidade para nossos
+            clientes por meio de sistemas eficientes e monitoramento contínuo.
           </p>
 
           <p className={styles.destaque}>

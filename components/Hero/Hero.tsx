@@ -15,14 +15,11 @@ export default function Hero() {
       <div className={styles.heroOverlay} />
 
       <div className={`${styles.heroContent} reveal`}>
-        <h1>
-          Empresa de segurança em Curitiba com monitoramento 24h e controle de
-          acesso
-        </h1>
+        <h1>Proteja seu patrimônio com monitoramento 24h</h1>
 
         <p>
-          Proteja seu patrimônio com tecnologia avançada, monitoramento 24h e
-          soluções completas em segurança e facilities.
+          Soluções completas em segurança eletrônica com atendimento rápido e
+          tecnologia de ponta em Curitiba e região.
         </p>
 
         <a
