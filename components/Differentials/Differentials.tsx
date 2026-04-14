@@ -7,29 +7,29 @@ export default function Differentials() {
     {
       icon: "fas fa-shield-alt",
       title: "Equipe altamente treinada",
-      text: "Profissionais altamente treinados para garantir segurança patrimonial e empresarial com excelência.",
+      text: "Profissionais preparados para atuar com monitoramento eletrônico, controle de acesso e gestão eficiente de ambientes.",
     },
     {
       icon: "fas fa-microchip",
       title: "Tecnologia de ponta",
-      text: "Tecnologia avançada para monitoramento inteligente, controle de acesso e resposta rápida.",
+      text: "Soluções modernas para monitoramento inteligente, controle de acesso e acompanhamento em tempo real.",
     },
     {
       icon: "fas fa-clock",
       title: "Monitoramento 24h",
-      text: "Proteção contínua com monitoramento 24h para empresas, condomínios e patrimônios.",
+      text: "Acompanhamento contínuo com resposta rápida para empresas, condomínios e ambientes corporativos.",
     },
     {
       icon: "fas fa-users",
       title: "Atendimento personalizado",
-      text: "Soluções de segurança sob medida, adaptadas às necessidades do seu negócio.",
+      text: "Soluções adaptadas às necessidades de cada cliente, com foco em eficiência e organização.",
     },
   ];
 
   return (
     <section
       className={styles.diferenciais}
-      aria-label="Diferenciais da empresa de segurança VITZ"
+      aria-label="Diferenciais da empresa de monitoramento VITZ"
     >
       {/* 🎥 VÍDEO */}
       <video className={styles.bgVideo} autoPlay muted loop playsInline>
@@ -39,7 +39,9 @@ export default function Differentials() {
       <div className="container">
         <div className={styles.content}>
           {/* TÍTULO SEO */}
-          <h2 className="titulo reveal">Por que escolher a Vitz?</h2>
+          <h2 className="titulo reveal">
+            Por que escolher a Vitz Monitoramento?
+          </h2>
 
           <div className={styles.containerGrid}>
             {items.map((item, index) => (
@@ -48,7 +50,7 @@ export default function Differentials() {
                 className={`${styles.item} reveal`}
                 style={{ "--delay": `${index * 0.2}s` } as React.CSSProperties}
               >
-                <i className={item.icon}></i>
+                <i className={item.icon} aria-hidden="true"></i>
 
                 <h3>{item.title}</h3>
 

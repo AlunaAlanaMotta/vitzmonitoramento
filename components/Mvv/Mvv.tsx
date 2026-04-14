@@ -7,17 +7,17 @@ export default function MVV() {
     {
       icon: "fas fa-bullseye",
       title: "Missão",
-      text: "Garantir segurança patrimonial e eficiência operacional por meio de tecnologia avançada, monitoramento 24h e gestão estratégica.",
+      text: "Proporcionar mais controle e tranquilidade para nossos clientes por meio de tecnologia avançada, monitoramento 24h e soluções eficientes.",
     },
     {
       icon: "fas fa-eye",
       title: "Visão",
-      text: "Ser referência em segurança empresarial em Curitiba, oferecendo soluções inteligentes, confiáveis e com alto padrão de qualidade.",
+      text: "Ser referência em monitoramento eletrônico em Curitiba, oferecendo soluções inteligentes, confiáveis e com alto padrão de qualidade.",
     },
     {
       icon: "fas fa-shield-alt",
       title: "Valores",
-      text: "Ética, compromisso com resultados, inovação contínua, excelência operacional e respeito total aos nossos clientes.",
+      text: "Ética, compromisso com resultados, inovação contínua, excelência no atendimento e respeito aos nossos clientes.",
     },
   ];
 
@@ -25,7 +25,7 @@ export default function MVV() {
     <section className={styles.mvv} aria-labelledby="mvv-titulo">
       <div className="container">
         <h2 id="mvv-titulo" className="titulo reveal">
-          Missão, Visão e Valores da VITZ Segurança
+          Missão, Visão e Valores da VITZ Monitoramento
         </h2>
 
         <div className={styles.mvvContainer}>

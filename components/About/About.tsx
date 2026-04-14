@@ -31,21 +31,24 @@ export default function About() {
           </h2>
 
           <p className={styles.subtitulo}>
-            Mais controle, menos riscos e segurança real para sua empresa
+            Mais controle, menos riscos e monitoramento eficiente para sua
+            empresa
           </p>
 
           <p>
-            A Vitz Monitoramento oferece soluções modernas em segurança
-            eletrônica para residências e empresas. Trabalhamos com tecnologia
+            A Vitz Monitoramento oferece soluções modernas em monitoramento
+            eletrônico para residências e empresas. Trabalhamos com tecnologia
             atualizada, atendimento ágil e foco total na proteção do seu
-            patrimônio. Nossa missão é garantir tranquilidade para nossos
-            clientes por meio de sistemas eficientes e monitoramento contínuo.
+            patrimônio por meio de sistemas inteligentes e acompanhamento
+            contínuo.
           </p>
 
           <p className={styles.destaque}>
-            Enquanto você foca no crescimento do seu negócio, nós cuidamos da
-            segurança, organização e performance do seu ambiente.
+            Enquanto você foca no crescimento do seu negócio, nós cuidamos do
+            monitoramento, da organização e do funcionamento contínuo do seu
+            ambiente.
           </p>
+
           <div className={styles.sobreCards}>
             {cards.map((card, index) => (
               <div
@@ -65,7 +68,7 @@ export default function About() {
         <div className={`${styles.sobreImg} reveal`}>
           <Image
             src="/images/sobre.png"
-            alt="Equipe de segurança empresarial monitorando ambiente corporativo"
+            alt="Sistema de monitoramento eletrônico em ambiente empresarial com câmeras e controle em tempo real"
             width={500}
             height={400}
             sizes="(max-width: 768px) 100vw, 500px"
@@ -74,7 +77,7 @@ export default function About() {
           <a
             href="#contato"
             className={styles.btnSobre}
-            aria-label="Falar com especialista em segurança"
+            aria-label="Falar com especialista em monitoramento eletrônico"
           >
             Fale com um especialista
           </a>

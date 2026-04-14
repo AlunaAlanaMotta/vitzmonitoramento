@@ -16,7 +16,6 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  // ================= VALIDAÇÃO =================
   const validate = (values: typeof form) => {
     const newErrors: Record<string, string> = {};
 
@@ -35,7 +34,6 @@ export default function Contact() {
     return newErrors;
   };
 
-  // ================= CHANGE =================
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -46,14 +44,12 @@ export default function Contact() {
     setErrors(validate(updated));
   };
 
-  // ================= BLUR =================
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setTouched({ ...touched, [e.target.name]: true });
   };
 
-  // ================= SUBMIT =================
   const handleSubmit = async (
     e: React.SyntheticEvent<HTMLFormElement, SubmitEvent>,
   ) => {
@@ -95,7 +91,6 @@ export default function Contact() {
     }
   };
 
-  // ================= CLASSES =================
   const getFieldClass = (field: string) => {
     if (!touched[field]) return "";
     return errors[field] ? styles.error : styles.success;
@@ -105,18 +100,14 @@ export default function Contact() {
     <section
       id="contato"
       className={styles.contato}
-      aria-label="Contato para orçamento de segurança em Curitiba"
+      aria-label="Contato para orçamento de monitoramento em Curitiba"
     >
       <div className="container">
-        {/* SEO TITLE */}
-        <h2 className="titulo reveal">
-          Solicite um orçamento em Curitiba e região
-        </h2>
+        <h2 className="titulo reveal">Solicite um orçamento</h2>
 
-        {/* SEO TEXT */}
         <p>
-          Entre em contato agora mesmo e descubra a melhor solução em segurança
-          para você.
+          Entre em contato agora mesmo e descubra a melhor solução em
+          monitoramento eletrônico para sua residência ou empresa.
         </p>
 
         <div className={styles.contatoWrapper}>
@@ -124,10 +115,9 @@ export default function Contact() {
           <form
             className={`${styles.contatoForm} reveal`}
             onSubmit={handleSubmit}
-            aria-label="Formulário de contato para orçamento"
+            aria-label="Formulário de contato para orçamento de monitoramento"
           >
             <div className={styles.formGrid}>
-              {/* NOME */}
               <div className={styles.inputGroup}>
                 <input
                   type="text"
@@ -144,7 +134,6 @@ export default function Contact() {
                 )}
               </div>
 
-              {/* EMAIL */}
               <div className={styles.inputGroup}>
                 <input
                   type="email"
@@ -161,7 +150,6 @@ export default function Contact() {
                 )}
               </div>
 
-              {/* ASSUNTO */}
               <div className={styles.inputGroup}>
                 <input
                   type="text"
@@ -172,7 +160,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* MENSAGEM */}
               <div className={`${styles.inputGroup} ${styles.full}`}>
                 <textarea
                   name="mensagem"
@@ -188,7 +175,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* BOTÃO */}
             <button
               type="submit"
               className={`${styles.btnEnviar} ${
@@ -207,14 +193,14 @@ export default function Contact() {
 
           {/* ================= WHATSAPP ================= */}
           <div className={`${styles.contatoInfo} reveal`}>
-            <p>Ou fale direto no WhatsApp:</p>
+            <p>Ou fale direto pelo WhatsApp:</p>
 
             <a
               href="https://wa.me/5541995502824?text=Olá,%20gostaria%20de%20um%20orçamento!"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnWhatsapp}
-              aria-label="Falar com a empresa pelo WhatsApp"
+              aria-label="Falar com a empresa sobre monitoramento pelo WhatsApp"
             >
               Falar no WhatsApp
             </a>

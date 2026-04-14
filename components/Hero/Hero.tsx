@@ -10,16 +10,16 @@ export default function Hero() {
     <section
       className={styles.hero}
       id="home"
-      aria-label="Seção inicial - VITZ Segurança"
+      aria-label="Seção inicial - VITZ Monitoramento"
     >
       <div className={styles.heroOverlay} />
 
       <div className={`${styles.heroContent} reveal`}>
-        <h1>Proteja seu patrimônio com monitoramento 24h</h1>
+        <h1>Monitoramento 24h para proteger o que é importante para você</h1>
 
         <p>
-          Soluções completas em segurança eletrônica com atendimento rápido e
-          tecnologia de ponta em Curitiba e região.
+          Soluções completas em monitoramento eletrônico com tecnologia moderna
+          e atendimento ágil em Curitiba e região.
         </p>
 
         <a

@@ -7,21 +7,21 @@ export default function Services() {
   const services = [
     {
       img: "/images/portaria.png",
-      tag: "Segurança",
+      tag: "Controle de Acesso",
       title: "Portaria e Controle de Acesso",
-      desc: "Serviço de portaria com controle de acesso seguro, identificação de visitantes e redução de riscos para empresas e condomínios.",
+      desc: "Gestão de entrada e saída com identificação de visitantes, organização e mais controle para empresas e condomínios.",
     },
     {
       img: "/images/central.png",
       tag: "Monitoramento",
       title: "Monitoramento 24h",
-      desc: "Acompanhamento em tempo real com equipe preparada para agir rapidamente em qualquer situação.",
+      desc: "Acompanhamento em tempo real com tecnologia moderna e equipe preparada para respostas rápidas.",
     },
     {
       img: "/images/zeladoria.png",
       tag: "Facilities",
       title: "Serviços de Facilities",
-      desc: "Gestão completa de facilities com organização, manutenção e eficiência operacional para reduzir custos e melhorar resultados.",
+      desc: "Soluções completas para organização, manutenção e eficiência operacional do seu ambiente.",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function Services() {
     >
       <div className="container">
         <h2 id="servicos-titulo" className="titulo reveal">
-          Serviços de segurança e monitoramento em Curitiba
+          Serviços de monitoramento e controle em Curitiba
         </h2>
 
         <div className={styles.servicosContainer}>
@@ -45,7 +45,7 @@ export default function Services() {
             >
               <Image
                 src={service.img}
-                alt={`${service.title} - VITZ Segurança`}
+                alt={`${service.title} com monitoramento e controle em Curitiba`}
                 fill
                 sizes="(max-width: 768px) 100vw, 320px"
                 className={styles.image}

@@ -19,7 +19,7 @@ const CONTACT_INFO = [
   },
   {
     type: "location",
-    label: "Curitiba - PR | Atendimento em toda região",
+    label: "Curitiba - PR",
   },
 ];
 
@@ -48,14 +48,14 @@ export default function Footer() {
   return (
     <footer
       className={styles.footer}
-      aria-label="Rodapé com informações da empresa de segurança VITZ"
+      aria-label="Rodapé com informações da empresa de monitoramento VITZ"
     >
       <div className={styles.footerContainer}>
         {/* LOGO + DESCRIÇÃO */}
         <div className={styles.footerCol}>
           <Image
             src="/images/logo_vitz-2.png"
-            alt="VITZ Segurança e Facilities em Curitiba"
+            alt="VITZ Monitoramento e Facilities em Curitiba"
             width={120}
             height={60}
             className={styles.footerLogo}
@@ -64,9 +64,9 @@ export default function Footer() {
           />
 
           <p>
-            Empresa de segurança e facilities em Curitiba, especializada em
-            portaria, controle de acesso e monitoramento 24h para empresas e
-            condomínios.
+            Empresa especializada em monitoramento eletrônico e facilities em
+            Curitiba, com soluções em controle de acesso, portaria e
+            acompanhamento 24h para empresas e condomínios.
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export default function Footer() {
                 className={`${styles.socialLink} ${styles[className]}`}
                 aria-label={label}
               >
-                <i className={icon}></i>
+                <i className={icon} aria-hidden="true"></i>
               </a>
             ))}
           </div>
@@ -136,8 +136,8 @@ export default function Footer() {
 
       {/* RODAPÉ FINAL */}
       <div className={styles.footerBottom}>
-        © {new Date().getFullYear()} VITZ Segurança e Facilities em Curitiba —
-        Todos os direitos reservados
+        © {new Date().getFullYear()} VITZ Monitoramento e Facilities em Curitiba
+        — Todos os direitos reservados
       </div>
     </footer>
   );
