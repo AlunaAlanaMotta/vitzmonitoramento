@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,22 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VITZ Segurança e Facilities",
+  title: "VITZ Monitoramento e Facilities",
   description:
-    "Empresa de segurança em Curitiba com monitoramento 24h, portaria e facilities. Proteja seu patrimônio com tecnologia e eficiência.",
+    "Empresa em Curitiba especializada em monitoramento 24h, portaria, controle de acesso e facilities. Soluções profissionais para empresas, condomínios e ambientes corporativos.",
   keywords: [
-    "segurança empresarial",
     "monitoramento 24h",
     "portaria",
+    "controle de acesso",
     "facilities",
-    "segurança Curitiba",
+    "monitoramento Curitiba",
+    "VITZ Monitoramento",
   ],
-  authors: [{ name: "VITZ Segurança" }],
+  authors: [{ name: "VITZ Monitoramento e Facilities" }],
   openGraph: {
-    title: "VITZ Segurança e Facilities",
-    description: "Soluções em segurança e monitoramento 24h em Curitiba.",
-    url: "https://seudominio.com",
-    siteName: "VITZ Segurança",
+    title: "VITZ Monitoramento e Facilities",
+    description:
+      "Soluções em monitoramento 24h, portaria e facilities em Curitiba.",
+    url: "https://www.vitzmonitoramento.com.br",
+    siteName: "VITZ Monitoramento e Facilities",
     locale: "pt_BR",
     type: "website",
   },
@@ -42,8 +45,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "VITZ Segurança e Facilities",
-    image: "",
+    name: "VITZ Monitoramento e Facilities",
+    image: "https://www.vitzmonitoramento.com.br/images/logo_vitz-2.png",
     telephone: "+5541995502824",
     address: {
       "@type": "PostalAddress",
@@ -51,8 +54,9 @@ export default function RootLayout({
       addressRegion: "PR",
       addressCountry: "BR",
     },
-    url: "https://seudominio.com",
+    url: "https://www.vitzmonitoramento.com.br",
   };
+
   return (
     <html
       lang="pt-BR"
@@ -64,8 +68,24 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
       </head>
+
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6SNBHTB4B0"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6SNBHTB4B0');
+          `}
+        </Script>
+
         <div className="page">{children}</div>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
