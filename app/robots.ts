@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://seudominio.com/sitemap.xml",
+    sitemap: "https://www.vitzmonitoramento.com.br/sitemap.xml",
   };
 }
